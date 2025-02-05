@@ -1,6 +1,5 @@
 import { Editor } from "@monaco-editor/react";
 import React, { type MutableRefObject, useEffect } from "react";
-import type { editor } from "monaco-editor";
 import type { Socket } from "socket.io-client";
 import ACTIONS from "../Actions";
 
