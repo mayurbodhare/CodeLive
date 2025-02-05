@@ -89,9 +89,7 @@ const EditorPage = () => {
 		}
 	}
 
-	function leaveRoom(
-		event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-	): void {
+	function leaveRoom(): void {
 		reactNavigator("/");
 	}
 

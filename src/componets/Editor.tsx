@@ -1,5 +1,5 @@
-import { Editor, useMonaco } from "@monaco-editor/react";
-import React, { type MutableRefObject, useEffect, useRef } from "react";
+import { Editor } from "@monaco-editor/react";
+import React, { type MutableRefObject, useEffect } from "react";
 import type { editor } from "monaco-editor";
 import type { Socket } from "socket.io-client";
 import ACTIONS from "../Actions";
@@ -34,9 +34,8 @@ const EditorComponent = ({
 
 	const handleEditorChange = (
 		value: string | undefined,
-		event: editor.IModelContentChangedEvent,
 	) => {
-    onCodeChange(value as string);
+		onCodeChange(value as string);
 		socketRef.current?.emit(ACTIONS.CODE_CHANGE, {
 			roomId,
 			value,

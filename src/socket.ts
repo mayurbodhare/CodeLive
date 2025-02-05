@@ -2,7 +2,7 @@ import { io, type ManagerOptions, type SocketOptions, type Socket, } from "socke
 
 
 
-export const initSocket = async () => {
+export const initSocket = async () : Promise<Socket> => {
     const options : Partial<ManagerOptions & SocketOptions>= {
         forceNew: true,
         // biome-ignore lint/style/useNumberNamespace: <explanation>

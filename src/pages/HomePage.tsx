@@ -16,7 +16,7 @@ const HomePage = () => {
 		toast.success("Created a new room");
 	}
 
-	function joinRoom(event: React.MouseEvent<HTMLButtonElement>): void {
+	function joinRoom(): void {
 		if (!roomId || !userName) {
 			toast.error("ROOM ID & USER NAME is required");
 			return;
@@ -28,7 +28,7 @@ const HomePage = () => {
 
     function handleEnterInput(event: React.KeyboardEvent<HTMLInputElement>): void {
         if (event.key === 'Enter') {
-            joinRoom(event as unknown as React.MouseEvent<HTMLButtonElement>);
+            joinRoom();
         }
     }
 
