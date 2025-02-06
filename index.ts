@@ -37,8 +37,8 @@ io.on("connection", (socket) => {
 	socket.on(ACTIONS.JOIN, ({ roomId, userName }) => {
 		userSocketMap[socket.id] = userName;
 		socket.join(roomId);
-		console.log("ACTIONs_JOIN", 'RoomId :', roomId);
-		console.log("ACTIONs_JOIN",'socket.id :', socket.id);
+		// console.log("ACTIONs_JOIN", 'RoomId :', roomId);
+		// console.log("ACTIONs_JOIN",'socket.id :', socket.id);
 		const clients = getAllConnectedClients(roomId);
 		for (const { socketId } of clients) {
 			io.to(socketId).emit(ACTIONS.JOINED, {
@@ -50,8 +50,8 @@ io.on("connection", (socket) => {
 	});
 
 	socket.on(ACTIONS.CODE_CHANGE, ({ roomId, value }) => {
-		console.log("ACTIONs_CODE_CHANGE",'RoomId :', roomId);
-		console.log("ACTIONs_CODE_CHANGE",'socket.id :', socket.id);
+		// console.log("ACTIONs_CODE_CHANGE",'RoomId :', roomId);
+		// console.log("ACTIONs_CODE_CHANGE",'socket.id :', socket.id);
         // code = value;
 		codeSocketMap[roomId] = value;
 		socket.in(roomId).emit(ACTIONS.CODE_CHANGE, {
@@ -60,8 +60,8 @@ io.on("connection", (socket) => {
 	});
 
 	socket.on(ACTIONS.SYNC_CODE, ({ socketId, value, roomId }) => {
-		console.log("ACTIONs_SYNC_CODE", 'SocketId :', socketId);
-		console.log("ACTIONs_SYNC_CODE", 'socket.id :',socket.id);
+		// console.log("ACTIONs_SYNC_CODE", 'SocketId :', socketId);
+		// console.log("ACTIONs_SYNC_CODE", 'socket.id :',socket.id);
 		io.to(socketId).emit(ACTIONS.CODE_CHANGE, {
 			value : codeSocketMap[roomId],
 		});
