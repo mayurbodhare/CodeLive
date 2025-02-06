@@ -50,6 +50,7 @@ const EditorPage = () => {
 					socketRef.current?.emit(ACTIONS.SYNC_CODE, {
 						value: codeRef.current,
 						socketId,
+						roomId
 					});
 				},
 			);
@@ -100,7 +101,7 @@ const EditorPage = () => {
 					<div className="logo">
 						<img
 							className="logoImage"
-							src="/code-sync-logo.png"
+							src="/CodeLive-bg-dark.jpg"
 							alt="code-sync"
 						/>
 					</div>

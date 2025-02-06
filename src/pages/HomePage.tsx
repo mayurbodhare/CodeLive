@@ -35,11 +35,14 @@ const HomePage = () => {
 	return (
 		<div className="homePageWrapper">
 			<div className="formWrapper">
-				<img
-					className="homePageLogo"
-					src="./code-sync-logo.png"
-					alt="code-sync-logo"
-				/>
+				<div className="logoContainer">
+					<img
+						className="homePageLogo"
+						src="/CodeLive.jpg"
+						alt="code-sync-logo"
+					/>
+				</div>
+					
 				<h4 className="mainLabel"> Paste invitation room Id</h4>
 				<div className="inputGroup">
 					<input
