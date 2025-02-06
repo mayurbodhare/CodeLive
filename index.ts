@@ -52,7 +52,7 @@ io.on("connection", (socket) => {
 	socket.on(ACTIONS.CODE_CHANGE, ({ roomId, value }) => {
 		console.log("ACTIONs_CODE_CHANGE",'RoomId :', roomId);
 		console.log("ACTIONs_CODE_CHANGE",'socket.id :', socket.id);
-        code = value;
+        // code = value;
 		codeSocketMap[roomId] = value;
 		socket.in(roomId).emit(ACTIONS.CODE_CHANGE, {
 			value,
