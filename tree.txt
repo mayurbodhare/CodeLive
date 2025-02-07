@@ -1,0 +1,46 @@
+D:\MERN\Socket.io\CodeSync
+├── bun.lockb
+├── dist
+|  ├── assets
+|  |  ├── index-bmM0qU9F.js
+|  |  └── index-DbyetqBv.css
+|  ├── code-sync-logo.png
+|  ├── CodeLive-bg-dark.jpg
+|  ├── CodeLive.jpg
+|  ├── favicon.png
+|  └── index.html
+├── eslint.config.js
+├── index.html
+├── index.ts
+├── package-lock.json
+├── package.json
+├── public
+|  ├── code-sync-logo.png
+|  ├── CodeLive-bg-dark.jpg
+|  ├── CodeLive.jpg
+|  └── favicon.png
+├── README.md
+├── src
+|  ├── Actions.ts
+|  ├── App.css
+|  ├── App.tsx
+|  ├── assets
+|  |  └── react.svg
+|  ├── componets
+|  |  ├── Client.tsx
+|  |  └── Editor.tsx
+|  ├── index.css
+|  ├── main.tsx
+|  ├── pages
+|  |  ├── EditorPage.tsx
+|  |  └── HomePage.tsx
+|  ├── socket.ts
+|  └── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+directory: 825 file: 3335
+
+ignored: directory (18)

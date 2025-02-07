@@ -34,7 +34,9 @@ function getAllConnectedClients(roomId: string) {
 }
 
 io.on("connection", (socket) => {
+		console.log("New client connected: ", socket.id);
 	socket.on(ACTIONS.JOIN, ({ roomId, userName }) => {
+
 		userSocketMap[socket.id] = userName;
 		socket.join(roomId);
 		// console.log("ACTIONs_JOIN", 'RoomId :', roomId);
